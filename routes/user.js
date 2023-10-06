@@ -31,6 +31,7 @@ router.post('/signup', async (req, res) => {
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
+  console.log('username :::', username)
   // Find the user by username
   const user = await User.findOne({ username });
   console.log(user);
